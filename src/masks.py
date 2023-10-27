@@ -9,4 +9,4 @@ def account_number(user_account: str) -> str:
     """
     Функция для маскировки номера счета
     """
-    return "***" + user_account[-4:]
+    return "**" + user_account[-4:]

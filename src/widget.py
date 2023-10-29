@@ -1,4 +1,4 @@
-from src.masks import number_card, account_number
+from masks import number_card, account_number
 from datetime import datetime
 
 

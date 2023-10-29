@@ -1,0 +1,1 @@
+def check_dict(data: list[dict], sort: bool = True) -> list[dict]:

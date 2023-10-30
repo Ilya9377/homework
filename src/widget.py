@@ -1,8 +1,9 @@
 from masks import number_card, account_number
 from datetime import datetime
+from typing import Any
 
 
-def hides_data(input_str: str) -> str:
+def hides_data(input_str: str) -> Any:
     """
     Функция возвращает тип карты/счета и скрытый номер карты/счета
     :param input_str: str

@@ -4,7 +4,7 @@ from typing import Any
 from masks import account_number, number_card
 
 
-def hides_data(input_str: str) -> Any:
+def hides_data(input_str: str) -> str:
     """
     Функция возвращает тип карты/счета и скрытый номер карты/счета
     :param input_str: str
@@ -12,9 +12,9 @@ def hides_data(input_str: str) -> Any:
     """
     input_lst = input_str.split(" ")
     if input_lst[0] == "Счет":
-        return input_lst[0] + " " + account_number(input_lst[1])
+        return str(input_lst[0] + " " + account_number(input_lst[1]))
     else:
-        return " ".join(input_lst[:-1]) + " " + number_card(input_lst[-1])
+        return str(" ".join(input_lst[:-1]) + " " + number_card(input_lst[-1]))
 
 
 def convert_data(data: str) -> str:

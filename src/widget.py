@@ -1,6 +1,7 @@
-from masks import number_card, account_number
 from datetime import datetime
 from typing import Any
+
+from masks import account_number, number_card
 
 
 def hides_data(input_str: str) -> Any:

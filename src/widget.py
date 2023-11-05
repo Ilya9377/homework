@@ -1,7 +1,6 @@
 from datetime import datetime
-from typing import Any
 
-from masks import account_number, number_card
+from src.masks import account_number, number_card
 
 
 def hides_data(input_str: str) -> str:
@@ -21,4 +20,4 @@ def convert_data(data: str) -> str:
     """Преобразование строки в объект даты и времени
     Формат строки включает миллисекунды, поэтому нужно использовать формат "%f" для них"""
     date_format = "%Y-%m-%dT%H:%M:%S.%f"
-    return datetime.strptime(data, date_format).strftime("%d.%m.%y")
+    return datetime.strptime(data, date_format).strftime("%d.%m.%Y")

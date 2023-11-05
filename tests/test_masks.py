@@ -21,9 +21,7 @@ def test_number_card(number: str, expected_result: str) -> Any:
 
 @pytest.mark.parametrize(
     "account, expected_result",
-    [("73654108430135874305", "**4305"),
-     ("35383033474447895560", "**5560"),
-     ("64686473678894779589", "**9589")],
+    [("73654108430135874305", "**4305"), ("35383033474447895560", "**5560"), ("64686473678894779589", "**9589")],
 )
 def test_account_number(account: str, expected_result: str) -> Any:
     assert account_number(account) == expected_result

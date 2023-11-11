@@ -1,15 +1,17 @@
 from typing import Any
 
 
-def filter_by_currency(list_dict: list[dict], valyta) -> Any:
-    return (i for i in list_dict if i["operationAmount"]["currency"]["code"] == valyta)
+def filter_by_currency(list_dict: list[Any], currency: str) -> Any:
+    """Фильтрует список словарей на основе указанного кода валюты."""
+    return (i for i in list_dict if i["operationAmount"]["currency"]["code"] == currency)
 
 
-def transaction_descriptions(transactions: list[dict]) -> Any:
-    return (i["description"] for i in transactions )
+def transaction_descriptions(transactions: list[Any]) -> Any:
+    """Возвращает генератор описаний транзакций из списка словарей."""
+    return (i["description"] for i in transactions)
 
 
-def convert_to_card_number(num) -> str:
+def convert_to_card_number(num: int) -> str:
     """Функция для конвертации номера крты по заданому числу"""
     mask = "0000 0000 0000 0000"
     s = ""
@@ -17,9 +19,9 @@ def convert_to_card_number(num) -> str:
         if i % 4 == 0:
             s += " "
         s += c
-    return mask[:len(mask) - (len(s) - 1)] + s[::-1]
+    return (mask[: len(mask) - (len(s) - 1)] + s[::-1])[:-1]
 
 
-def card_number_generator(start: int, end: int):
+def card_number_generator(start: int, end: int) -> Any:
     """генератор номемеров заданых карт в заданом диапазоне"""
     return (convert_to_card_number(i) for i in range(start, end + 1))

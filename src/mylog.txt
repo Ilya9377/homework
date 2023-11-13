@@ -1,0 +1,5 @@
+2023-11-13 17:05:00 my_function error: <class 'Exception'>. Inputs: (1, 2), {}
+2023-11-13 17:05:15 my_function error: <class 'Exception'>. Inputs: (1, 2), {}
+2023-11-13 17:08:51 my_function error: can only concatenate tuple (not "dict") to tuple. Inputs: (1, 2), {}
+2023-11-13 17:39:43 my_function error: can only concatenate tuple (not "dict") to tuple. Inputs: (1, 2), {}
+2023-11-13 17:39:43 my_function error: can only concatenate tuple (not "dict") to tuple. Inputs: (1, 2), {}
